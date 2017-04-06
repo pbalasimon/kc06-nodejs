@@ -1,0 +1,49 @@
+{
+  "ads": [
+    {
+      "name": "Bike",
+      "sale": true,
+      "price": 449.00,
+      "photo": "./public/images/bike.jpg",
+      "tags": [
+        "lifestyle"
+      ]
+    },
+    {
+      "name": "iPhone 7",
+      "sale": false,
+      "price": 749.00,
+      "photo": "./public/images/iphone.png",
+      "tags": [
+        "mobile"
+      ]
+    },
+    {
+      "name": "Seat 600",
+      "sale": true,
+      "price": 600.00,
+      "photo": "./public/images/car.png",
+      "tags": [
+        "lifestyle",
+        "motor"
+      ]
+    },
+    {
+      "name": "Macbook Pro Retina",
+      "sale": true,
+      "price": 900.00,
+      "photo": "./public/images/macbook.jpg",
+      "tags": [
+        "lifestyle",
+        "mobile"
+      ]
+    }
+  ],
+  "users": [
+    {
+      "name": "Pedro",
+      "email": "admin@nodepop.com",
+      "password": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "TOKEN_INVALID": {
+    "es": "El token es inválido",
+    "en": "The token is invalid"
+  },
+  "EMAIL_MANDATORY": {
+    "es": "El email es obligatorio",
+    "en": "Email is mandatory"
+  },
+  "PASSWORD_MANDATORY": {
+    "es": "La contraseña es obligatoria",
+    "en": "Password is mandatory"
+  },
+  "NAME_MANDATORY": {
+    "es": "El nombre es obligatorio",
+    "en": "Name is mandatory"
+  },
+  "AUTHENTICATION_FAILED": {
+    "es": "Login incorrecto. Usuario o password inválido",
+    "en": "Login incorrect. User o password invalid"
+  }
+}

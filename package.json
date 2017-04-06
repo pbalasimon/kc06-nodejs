@@ -1,9 +1,12 @@
 {
   "name": "nodepop",
+  "author": "Pedro Bala Simón",
+  "description": "Práctica JS/Node.js/MongoDB (Bootcamp Web 2017)",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "installDB": "nodemon ./scripts/install_db.js"
   },
   "dependencies": {
     "body-parser": "~1.16.0",
@@ -11,7 +14,10 @@
     "debug": "~2.6.0",
     "ejs": "~2.5.5",
     "express": "~4.14.1",
+    "jsonwebtoken": "^7.3.0",
+    "mongoose": "^4.9.2",
     "morgan": "~1.7.0",
-    "serve-favicon": "~2.3.2"
+    "serve-favicon": "~2.3.2",
+    "sha256": "^0.2.0"
   }
 }
