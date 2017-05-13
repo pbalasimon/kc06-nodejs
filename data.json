@@ -4,7 +4,7 @@
       "name": "Bike",
       "sale": true,
       "price": 449.00,
-      "photo": "./public/images/bike.jpg",
+      "photo": "./images/ads/bike.jpg",
       "tags": [
         "lifestyle"
       ]
@@ -13,7 +13,7 @@
       "name": "iPhone 7",
       "sale": false,
       "price": 749.00,
-      "photo": "./public/images/iphone.png",
+      "photo": "./images/ads/iphone.jpg",
       "tags": [
         "mobile"
       ]
@@ -22,7 +22,7 @@
       "name": "Seat 600",
       "sale": true,
       "price": 600.00,
-      "photo": "./public/images/car.png",
+      "photo": "./images/ads/car.jpg",
       "tags": [
         "lifestyle",
         "motor"
@@ -32,7 +32,7 @@
       "name": "Macbook Pro Retina",
       "sale": true,
       "price": 900.00,
-      "photo": "./public/images/macbook.jpg",
+      "photo": "./images/ads/macbook.jpg",
       "tags": [
         "lifestyle",
         "mobile"

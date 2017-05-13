@@ -6,7 +6,17 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "installDB": "nodemon ./scripts/install_db.js"
+    "installDB": "nodemon ./scripts/install_db.js",
+    "jshint": "jshint --exclude ./node_modules"
+  },
+  "jshintConfig": {
+    "node": true,
+    "esnext": true,
+    "globals": {},
+    "globalstrict": true,
+    "quotmark": "single",
+    "undef": true,
+    "unused": true
   },
   "dependencies": {
     "body-parser": "~1.16.0",

@@ -15,17 +15,23 @@ exports.ensureAuthenticated = function (req, res, next) {
 
     if (!token) {
         var message = messages.TOKEN_INVALID;
-        if (language == 'es') {
-            message = message.es;
-        } else if (language == 'en') {
+        if (language == 'en') {
             message = message.en;
+        } else {
+            message = message.es;
         }
         return res.status(401).json({success: false, error: message});
     }
 
     jwt.verify(token, configJWT.jwt.secret, function (err, decoded) {
         if (err) {
-            return next(new Error('Invalid token'));
+            var message = messages.TOKEN_INVALID;
+            if (language == 'en') {
+                message = message.en;
+            } else {
+                message = message.es;
+            }
+            return res.status(401).json({success: false, error: message});
         }
         req.user_id = decoded.user_id;
         next();

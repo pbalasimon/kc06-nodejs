@@ -3,15 +3,14 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var app = express();
 
-var adModel = require('./models/ad');
-var userModel = require('./models/user');
+require('./models/ad');
+require('./models/user');
+require('./service/db_service');
 var adsCtrl = require('./routes/api/1.0/ads/ads_controller');
 var authCtrl = require('./routes/api/1.0/auth/auth_controller');
-require('./service/db_service');
 var authService = require('./service/auth_service');
-
-var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -28,7 +27,7 @@ var ads = express.Router();
 var users = express.Router();
 
 ads.route('/ads').get(authService.ensureAuthenticated, adsCtrl.findAllAds);
-ads.route('/tags').get(adsCtrl.findAllTags);
+ads.route('/tags').get(authService.ensureAuthenticated, adsCtrl.findAllTags);
 users.route('/auth/signup').post(authCtrl.signup);
 users.route('/auth/login').post(authCtrl.login);
 

@@ -16,30 +16,30 @@ exports.signup = function (req, res) {
 
     if (!name) {
         var message = messages.NAME_MANDATORY;
-        if (language == 'es') {
-            message = message.es;
-        } else if (language == 'en') {
+        if (language == 'en') {
             message = message.en;
+        } else {
+            message = message.es;
         }
         return res.status(401).json({success: false, error: message});
     }
 
     if (!email) {
         var message = messages.EMAIL_MANDATORY;
-        if (language == 'es') {
-            message = message.es;
-        } else if (language == 'en') {
+        if (language == 'en') {
             message = message.en;
+        } else {
+            message = message.es;
         }
         return res.status(401).json({success: false, error: message});
     }
 
     if (!password) {
         var message = messages.PASSWORD_MANDATORY;
-        if (language == 'es') {
-            message = message.es;
-        } else if (language == 'en') {
+        if (language == 'en') {
             message = message.en;
+        } else {
+            message = message.es;
         }
         return res.status(401).json({success: false, error: message});
     } else {
@@ -54,7 +54,7 @@ exports.signup = function (req, res) {
 
     user.save(function (err, user) {
         if (err) return res.status(500).send(err.message);
-        res.status(200).json(user);
+        res.status(200).json({success: true, user});
     });
 };
 
@@ -66,20 +66,20 @@ exports.login = function (req, res) {
 
     if (!email) {
         var message = messages.EMAIL_MANDATORY;
-        if (language == 'es') {
-            message = message.es;
-        } else if (language == 'en') {
+        if (language == 'en') {
             message = message.en;
+        } else {
+            message = message.es;
         }
         return res.status(401).json({success: false, error: message});
     }
 
     if (!password) {
         var message = messages.PASSWORD_MANDATORY;
-        if (language == 'es') {
-            message = message.es;
-        } else if (language == 'en') {
+        if (language == 'en') {
             message = message.en;
+        } else {
+            message = message.es;
         }
         return res.status(401).json({success: false, error: message});
     } else {
@@ -91,10 +91,10 @@ exports.login = function (req, res) {
         if (err) return res.status(500).send(err.message);
         if (!user) {
             var message = messages.AUTHENTICATION_FAILED;
-            if (language == 'es') {
-                message = message.es;
-            } else if (language == 'en') {
+            if (language == 'en') {
                 message = message.en;
+            } else {
+                message = message.es;
             }
             return res.status(400).send({success: false, error: message});
         }
